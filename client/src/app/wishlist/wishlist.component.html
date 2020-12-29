@@ -1,0 +1,42 @@
+<h1>{{fname}}'s Wishlist</h1>
+
+<div class="row" *ngIf="isSearching">
+    <div class="col-12 text-center">
+      <img src="../../assets/pageTurner.gif" alt="Searching..." class="mt-4"/>
+    </div>
+</div>
+
+<ng-container *ngIf="books.length == 0; else elseTemplate">
+  
+        <div class="col-12 text-center">
+          <div class="alert alert-danger" role="alert">
+            <p>No books were found, add some books to your Wishlist!</p>
+            
+          </div>
+        </div>
+      </ng-container>
+      
+      <ng-template #elseTemplate>
+        <button (click)="emptyWishlist($event)" class="btn btn-success basket">Empty Wishlist</button>
+          <div class="row">
+          <div class="wrapper" *ngFor="let book of books">
+            <div *ngIf="book.book" >
+              <div class="">
+                <div class="card" contentEditable role='textbox' aria-multiline='true'>
+                  <img src={{book.book.image}}>
+                  <div class="descriptions">
+                    <h3>{{book.book.title}}</h3>
+                    <p class="card-text">{{book.book.author}}</p>
+                    <p class="desc">
+                        {{book.book.description}}
+                    </p>
+                    <div class="hide">{{book.book.isbn}}</div>
+                    <button (click)="addToCart($event)" class="btn cart">Cart</button>
+                    <button (click)="deleteFromWishlist($event)" class="btn wish">Remove</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>

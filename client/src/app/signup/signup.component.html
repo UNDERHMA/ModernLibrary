@@ -1,0 +1,49 @@
+<div class="container center" *ngIf="isLoading; else elseTemplate">
+    <div class="col-12 text-center">
+
+      <img src="../../assets/pageTurner.gif" alt="Searching..." class="mt-4">
+
+    </div>
+  </div>
+
+<ng-template #elseTemplate >
+    <div class="container center sign-up">
+    <div class="title">Sign Up</div>
+
+    <form [formGroup]= "signUpForm" (ngSubmit)="signUpSubmit(signUpForm)" ngNativeValidate>
+
+        <div class="form-group">
+            <label for="fname"> </label>
+                <input type="text"  formControlName="firstName" name="fname" placeholder="First Name" required minlength="3"/>
+    
+        </div>
+        <div class="form-group">
+            <label for="lname"> </label>
+            <input type="text"  formControlName="lastName" placeholder="Last Name" required minlength="4"/>
+            
+        </div>
+        <div class="form-group">
+            <label for="username"></label>
+            <input type="text"  formControlName="username" placeholder="Username" required minlength="6"/>
+            
+        </div>
+        <div class="form-group">
+            <label for="password"> </label>
+                <input type="password"  formControlName="passHash" placeholder="Password" required minlength="6"/>
+
+        </div>
+        <div class="form-group">
+            <label for="email"> </label>
+                <input type="email"  formControlName="email" placeholder="Email" required minlength="6"/>
+    
+        </div>
+        <div class="form-group">
+            <label for="phone"> </label>
+                <input type="tel"  formControlName="phone" placeholder="Phone" required pattern="[(][0-9]{3}[)][0-9]{3}-[0-9]{4}" title="(123)456-7890"/>
+    
+        </div>
+
+    <button type="submit" id="submit" class=" mt-4 btn btn-success">Submit</button>
+    </form>
+    </div>
+</ng-template>

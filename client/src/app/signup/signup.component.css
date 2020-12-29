@@ -1,0 +1,20 @@
+.sign-up {
+  border: 1px solid black;
+  padding: 10px -30px;
+  width: 300px;
+  border-radius: 20px;
+  background: rgb(0, 0, 0, 0.4);
+}
+
+form {
+  padding: 0;
+  width: 200px;
+  margin: 30px auto;
+}
+
+.title {
+  color: #04a304;
+  margin-top: 20px;
+  font-size: 20px;
+  margin-bottom: -40px;
+}

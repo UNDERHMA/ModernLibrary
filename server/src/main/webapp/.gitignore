@@ -1,0 +1,7 @@
+.idea
+*.iml
+target
+*.js
+*.js.map
+main.js
+main.js.map

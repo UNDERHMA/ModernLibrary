@@ -1,0 +1,29 @@
+#edit {
+  /* border: 1px solid black; */
+  padding: 10px -30px;
+  width: 300px;
+  border-radius: 20px;
+  border: 5px solid;
+  border-image-source: linear-gradient(45deg, #ccb585, #b93636);
+  border-image-slice: 1;
+  color: white;
+  font-weight: bolder;
+  border-radius: 20px;
+  background: rgb(0, 0, 0, 0.4);
+}
+
+form {
+  padding: 0;
+  width: 200px;
+  margin: 30px auto;
+}
+
+.title {
+  color: white;
+  margin-top: 20px;
+  font-size: 20px;
+  margin-bottom: -40px;
+}
+#submit {
+  margin-top: 20px;
+}

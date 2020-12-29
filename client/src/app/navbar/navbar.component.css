@@ -1,0 +1,20 @@
+.navbar {
+  border: 5px solid;
+  border-image-source: linear-gradient(45deg, #ccb585, #b93636);
+  border-image-slice: 1;
+  color: white;
+  font-weight: bolder;
+  border-radius: 20px;
+  background-color: rgb(0, 0, 0, 0.4);
+  /* background: transparent; */
+}
+
+.links {
+  position: absolute;
+  right: 20px;
+}
+a {
+  color: white;
+}
+.nav-item {
+}

@@ -1,0 +1,12 @@
+.idea
+*.iml
+target
+*.js
+*.map
+db.properties
+
+main.js
+main.js.map
+polyfills.js
+polyfills.js.map
+styles.css.map

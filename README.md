@@ -1,2 +1,9 @@
-# ModernLibrary
-The Modern Library Application is a web application that allows users to login, browse and checkout books. Users can additionally add books to a wishlist and checkout multiple books from their cart. The user interface is visually appealing and easy to use.
+# Revature Library App PRJ-TWO
+
+Revature - 1120 Java - August
+Project Two - Library Application using Angular, Hibernate, Javalin, etc
+
+Contributors: 
+Javier Gonzalez
+Andre Entrekin
+Mason Underhill

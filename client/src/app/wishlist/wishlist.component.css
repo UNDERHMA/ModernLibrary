@@ -1,0 +1,136 @@
+body {
+  /* background-color: #3d3d3d; */
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100vh;
+  font-family: "Lato";
+}
+h1 {
+  color: #ccb585;
+  margin-left: 50px;
+}
+.row {
+  justify-content: center;
+}
+.wrapper {
+  /* transform: translate(-50%, -50%); */
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px;
+}
+.card {
+  flex: 1;
+  flex-basis: 300px;
+  flex-grow: 0;
+  height: 440px;
+  width: 300px;
+  background: #fff;
+  border: 2px solid #fff;
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  overflow: hidden;
+  position: relative;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+}
+.descriptions {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  transition: all 0.7s ease-in-out;
+  padding: 20px;
+  box-sizing: border-box;
+  clip-path: circle(0% at 100% 100%);
+}
+.card:hover .descriptions {
+  left: 0px;
+  transition: all 0.7s ease-in-out;
+  clip-path: circle(75%);
+}
+.card:hover {
+  transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+  transform: scale(0.97);
+}
+.card:hover img {
+  transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  transform: scale(1.6) rotate(20deg);
+  filter: blur(3px);
+}
+.card h3 {
+  color: white;
+  text-shadow: 0 0 5px black;
+  letter-spacing: 1px;
+  margin: 0px;
+  height: 68px;
+  overflow: hidden;
+}
+.card p {
+  color: white;
+  text-shadow: 0 0 5px black;
+  line-height: 24px;
+  height: 55%;
+  font-size: 20px;
+}
+.card:hover .desc {
+  background: rgba(54, 54, 54, 0.356);
+  border-radius: 10px 0 0 10px;
+}
+.desc {
+  height: 150px;
+  /* height: 100%; */
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-right: 50px;
+  margin-bottom: 40px;
+  box-sizing: content-box;
+  mix-blend-mode: difference;
+}
+
+.card button {
+  position: absolute;
+  bottom: 15px;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  border-style: none;
+  background-color: #04a304;
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
+  transition: all 0.5s ease-in-out;
+}
+
+.card button:hover {
+  transform: scale(0.95) translateX(-5px);
+  transition: all 0.5s ease-in-out;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.wish-btn {
+  max-width: 200px;
+  display: block;
+}
+
+.wish {
+  right: 30px;
+}
+.cart {
+  left: 30px;
+}

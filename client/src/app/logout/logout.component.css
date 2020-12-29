@@ -1,0 +1,14 @@
+.out {
+  /* border: 1px solid black; */
+  border-radius: 20px;
+  width: fit-content;
+  color: #04a304;
+  padding: 20px;
+  border: 5px solid;
+  border-image-source: linear-gradient(45deg, #ccb585, #b93636);
+  border-image-slice: 1;
+  color: white;
+  font-weight: bolder;
+  border-radius: 20px;
+  background: rgb(0, 0, 0, 0.4);
+}

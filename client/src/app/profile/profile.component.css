@@ -1,0 +1,26 @@
+#profile {
+  /* border: 1px solid black; */
+  padding: 30px -30px;
+  width: 300px;
+  border-radius: 20px;
+  border: 5px solid;
+  border-image-source: linear-gradient(45deg, #ccb585, #b93636);
+  border-image-slice: 1;
+  color: white;
+  font-weight: bolder;
+  background: rgb(0, 0, 0, 0.4);
+  border-radius: 20px;
+}
+
+section {
+  margin: 10px 0;
+}
+.fa-cog {
+  float: right;
+  padding: 5px 5px 0 0;
+  font-size: 25px;
+}
+a,
+span {
+  color: white;
+}

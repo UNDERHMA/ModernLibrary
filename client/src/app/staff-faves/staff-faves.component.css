@@ -1,0 +1,506 @@
+.staff-title {
+  margin-top: 10px;
+}
+.staff-ctn {
+  /* border: 1px solid #c5c4c4; */
+  border-radius: 20px;
+  margin: 0 50px 60px 0;
+  /* background: white; */
+  border: 5px solid;
+  border-image-source: linear-gradient(45deg, #b93636, #ccb585);
+  border-image-slice: 1;
+  color: white;
+  font-weight: bolder;
+  border-radius: 20px;
+  background: rgb(0, 0, 0, 0.4);
+}
+
+.staff-text {
+  padding: 10px 50px;
+}
+
+.card-ctn {
+  width: 100vw;
+  height: 300px;
+}
+
+.carousel-wrapper {
+  height: 400px;
+  position: relative;
+  width: 800px;
+  margin: 0 auto;
+}
+.carousel-item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 25px 50px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 12px;
+}
+
+.arrow-prev {
+  left: -30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(135deg);
+}
+
+.arrow-next {
+  right: -30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.light {
+  color: white;
+}
+
+/* *************************
+       Card Carousel
+**************************** */
+.content-slider {
+  width: 100%;
+  height: 315px;
+}
+
+.slider {
+  height: 320px;
+  width: 305px;
+  margin: 0px auto 0;
+  overflow: visible;
+  position: relative;
+}
+
+.mask {
+  overflow: hidden;
+  height: 320px;
+  margin-left: 8%;
+}
+
+.slider ul {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.slider li {
+  width: 320px;
+  height: 320px;
+  position: absolute;
+  left: -325px;
+  list-style: none;
+}
+
+.slider .quote {
+  font-size: 40px;
+  font-style: italic;
+}
+
+.slider .source {
+  font-size: 20px;
+  text-align: right;
+}
+
+.slider li.anim1 {
+  animation: cycle 15s linear infinite;
+}
+
+.slider li.anim2 {
+  animation: cycle2 15s linear infinite;
+}
+
+.slider li.anim3 {
+  animation: cycle3 15s linear infinite;
+}
+
+.slider li.anim4 {
+  animation: cycle4 15s linear infinite;
+}
+
+.slider li.anim5 {
+  animation: cycle5 15s linear infinite;
+}
+
+.slider li.anim6 {
+  animation: cycle6 15s linear infinite;
+}
+
+.slider li.anim7 {
+  animation: cycle7 15s linear infinite;
+}
+
+.slider:hover li {
+  animation-play-state: paused;
+}
+
+@keyframes cycle {
+  0% {
+    left: 0px;
+  }
+  4% {
+    left: 0px;
+  }
+  16% {
+    left: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  20% {
+    left: 325px;
+    opacity: 0;
+    z-index: 0;
+  }
+  21% {
+    left: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  50% {
+    left: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  92% {
+    left: -325px;
+    opacity: 0;
+    z-index: 0;
+  }
+  96% {
+    left: -325px;
+    opacity: 0;
+  }
+  100% {
+    left: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes cycle2 {
+  0% {
+    left: -325px;
+    opacity: 0;
+  }
+  16% {
+    left: -325px;
+    opacity: 0;
+  }
+  20% {
+    left: 0px;
+    opacity: 1;
+  }
+  24% {
+    left: 0px;
+    opacity: 1;
+  }
+  36% {
+    left: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  40% {
+    left: 325px;
+    opacity: 0;
+    z-index: 0;
+  }
+  41% {
+    left: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    left: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes cycle3 {
+  0% {
+    left: -325px;
+    opacity: 0;
+  }
+  36% {
+    left: -325px;
+    opacity: 0;
+  }
+  40% {
+    left: 0px;
+    opacity: 1;
+  }
+  44% {
+    left: 0px;
+    opacity: 1;
+  }
+  56% {
+    left: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  60% {
+    left: 325px;
+    opacity: 0;
+    z-index: 0;
+  }
+  61% {
+    left: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    left: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes cycle4 {
+  0% {
+    left: -325px;
+    opacity: 0;
+  }
+  56% {
+    left: -325px;
+    opacity: 0;
+  }
+  60% {
+    left: 0px;
+    opacity: 1;
+  }
+  64% {
+    left: 0px;
+    opacity: 1;
+  }
+  76% {
+    left: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  80% {
+    left: 325px;
+    opacity: 0;
+    z-index: 0;
+  }
+  81% {
+    left: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    left: -325px;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes cycle5 {
+  0% {
+    left: -325px;
+    opacity: 0;
+  }
+  76% {
+    left: -325px;
+    opacity: 0;
+  }
+  80% {
+    left: 0px;
+    opacity: 1;
+  }
+  84% {
+    left: 0px;
+    opacity: 1;
+  }
+  96% {
+    left: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  100% {
+    left: 325px;
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+@keyframes cycle6 {
+  0% {
+    left: -325px;
+    opacity: 0;
+  }
+  76% {
+    left: -325px;
+    opacity: 0;
+  }
+  80% {
+    left: 0px;
+    opacity: 1;
+  }
+  84% {
+    left: 0px;
+    opacity: 1;
+  }
+  96% {
+    left: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  100% {
+    left: 325px;
+    opacity: 0;
+    z-index: 0;
+  }
+}
+@keyframes cycle7 {
+  0% {
+    left: -325px;
+    opacity: 0;
+  }
+  76% {
+    left: -325px;
+    opacity: 0;
+  }
+  80% {
+    left: 0px;
+    opacity: 1;
+  }
+  84% {
+    left: 0px;
+    opacity: 1;
+  }
+  96% {
+    left: 0px;
+    opacity: 1;
+    z-index: 0;
+  }
+  100% {
+    left: 325px;
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+/* *************************
+      End Card Carousel
+**************************** */
+
+/* *************************
+      Card Styles
+**************************** */
+.card {
+  flex: 1;
+  flex-basis: 300px;
+  flex-grow: 0;
+  height: 300px;
+  width: 200px;
+  background: #fff;
+  border: 2px solid #fff;
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  overflow: hidden;
+  position: relative;
+  margin-left: 20px;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+}
+.descriptions {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  transition: all 0.7s ease-in-out;
+  padding: 20px;
+  box-sizing: border-box;
+  clip-path: circle(0% at 100% 100%);
+}
+.card:hover .descriptions {
+  left: 0px;
+  transition: all 0.7s ease-in-out;
+  clip-path: circle(75%);
+}
+.card:hover {
+  transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+  transform: scale(0.97);
+}
+.card:hover img {
+  transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  transform: scale(1.6) rotate(20deg);
+  filter: blur(3px);
+}
+.card h5 {
+  color: white;
+  text-shadow: 0 0 5px black;
+  letter-spacing: 1px;
+  margin: 0px;
+  margin-top: -20px;
+  height: 45px;
+  overflow: hidden;
+}
+
+.card p {
+  color: white;
+  text-shadow: 0 0 5px black;
+  line-height: 24px;
+  font-size: 15px;
+}
+.card-text {
+  height: 47px;
+}
+.card:hover .desc {
+  background: rgba(54, 54, 54, 0.356);
+  border-radius: 10px 0 0 10px;
+}
+.desc {
+  height: 100px;
+  height: 147px;
+  width: 100%;
+  overflow-y: scroll;
+  padding-right: 40px;
+  margin-bottom: 20px;
+  margin-top: -12px;
+  box-sizing: content-box;
+  mix-blend-mode: difference;
+}
+
+.card button {
+  position: absolute;
+  bottom: 15px;
+  width: 70px;
+  height: 30px;
+  cursor: pointer;
+  border-style: none;
+  background-color: #04a304;
+  color: #fff;
+  font-size: 13px;
+  outline: none;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
+  transition: all 0.5s ease-in-out;
+}
+.wish {
+  right: 10px;
+}
+.cart {
+  left: 10px;
+}
+
+.card button:hover {
+  transform: scale(0.95) translateX(-5px);
+  transition: all 0.5s ease-in-out;
+}
+
+.hide {
+  opacity: 0;
+}

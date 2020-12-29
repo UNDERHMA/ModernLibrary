@@ -1,0 +1,28 @@
+<div class="container center" *ngIf="isLoading; else elseTemplate">
+    <div class="col-12 text-center">
+
+      <img src="../../assets/pageTurner.gif" alt="Searching..." class="mt-4">
+
+    </div>
+  </div>
+
+<ng-template #elseTemplate >
+    <div class="container center landing">
+    <div class="title">Log In</div>
+    <form (ngSubmit)="loginSubmit()" id="login">
+        <div class="form-group">
+            <label for="username"></label>
+                <input type="text"  name="username" placeholder="Username" [(ngModel)]="username" />
+    
+        </div>
+        <div class="form-group">
+            <label for="password"> </label>
+                <input type="password"  name="password" placeholder="Password" [(ngModel)]="password" />
+    
+        </div>
+    
+        <button type="submit" id="submit" class="mt-4 btn btn-success ml-1">Submit</button>
+        <a routerLink="/signup" class="mt-4 btn btn-secondary ml-3">Sign Up</a>
+    </form>
+    </div>
+</ng-template>

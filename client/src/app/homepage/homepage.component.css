@@ -1,0 +1,17 @@
+.welcome {
+  font-family: "Lobster", cursive;
+  font-size: 40px;
+  color: #ccb585;
+}
+
+.top {
+  margin-top: -17px;
+}
+
+.staff {
+  margin-left: 90px;
+}
+
+.events {
+  height: 130px;
+}

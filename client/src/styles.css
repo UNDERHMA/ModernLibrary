@@ -1,0 +1,81 @@
+body {
+  font-family: "Nanum Myeongjo", serif;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 0px;
+}
+
+.btn:active {
+  transform: scale(0.85);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.form-group {
+  padding: 5px;
+  height: 45px;
+}
+.center {
+  text-align: center;
+  margin-top: 15%;
+}
+.left {
+  text-align: left;
+}
+
+/* ************************* */
+/* Global styles for Cards */
+/* ************************* */
+.card {
+  height: 350px;
+  width: 200px;
+  border-radius: 15px;
+  border: 1px solid black;
+  margin: 10px;
+}
+.card:hover {
+}
+
+.image {
+  border-radius: 15px 15px 0 0;
+  height: 250px;
+  max-width: 200px;
+  width: 200px;
+  z-index: 1;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-text {
+  max-height: 45px;
+  overflow: hidden;
+}
+
+.card-title {
+  max-height: 70px;
+  overflow: hidden;
+}
+
+.hide {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+}
+
+/* **************************** */
+/* END  Global styles for Cards */
+/* **************************** */
+
+.basket {
+  max-width: 200px;
+  margin: 0;
+  position: absolute;
+  padding-right: 55px;
+  right: -5px;
+  top: 70px;
+}

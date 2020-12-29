@@ -1,0 +1,76 @@
+<div style="margin: 50px;">
+
+    <div class="container" style="text-align:center">
+      <div class="row">
+        <div class="col-12 text-center">
+         
+          <div *ngIf="addedToCart">
+            <div class="col-8 text-center widget">
+              <div class="alert alert-success" role="alert">
+                <p>Book added to Cart!</p>
+              </div>
+            </div>
+          </div>
+
+          <ng-container *ngIf="addedToWishlist">
+            <div class="col-8 text-center widget">
+              <div class="alert alert-success" role="alert">
+                <p>Book added to Wishlist!</p>
+              </div>
+            </div>
+          </ng-container>
+  
+          <input type="text" #bookSearchInput class="form-control search-bar mb-4" placeholder="Type any book or author name" />
+  
+        </div>
+      </div>
+      <div class="row" *ngIf="isSearching">
+        <div class="col-12 text-center">
+  
+          <img src="../../assets/pageTurner.gif" alt="Searching..." class="mt-4">
+  
+        </div>
+      </div>
+      <div class="row">
+  
+        <ng-container *ngIf="apiResponse.totalItems == 0; else elseTemplate">
+
+            <div class="col-12 text-center">
+              <div class="alert alert-danger" role="alert">
+                <p>No books were found, please try again</p>
+    
+              </div>
+            </div>
+    
+          </ng-container>
+
+           
+          <ng-template #elseTemplate>
+            <!-- <div class="card-container"> -->
+              <div class="wrapper" *ngFor="let book of apiResponse['items']">
+                <div *ngIf="book.volumeInfo" >
+                  <div class="">
+                    <div class="card" contentEditable role='textbox' aria-multiline='true'>
+                      <img src={{book.volumeInfo.imageLinks.thumbnail}}>
+                      <div class="descriptions">
+                        <h3>{{book.volumeInfo.title}}</h3>
+                        <p class="card-text">{{book.volumeInfo.authors}}</p>
+                        <p class="desc">
+                            {{book.volumeInfo.description}}
+                        </p>
+                        <div class="hide" *ngIf="book.volumeInfo.industryIdentifiers !== undefined">
+                          {{book.volumeInfo.industryIdentifiers[0].identifier}}</div>
+                        <button (click)="addToCart($event)" class="btn cart">Cart</button>
+                        <button (click)="addToWishlist($event)" class="btn wish">Wishlist</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- </div> -->
+          </ng-template>
+  
+      </div>
+    </div>
+  
+  </div>
